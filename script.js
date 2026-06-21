@@ -126,10 +126,10 @@
 };
 
 const products = [
-  { nameEn: "Gourmet Pasta", nameAr: "معكرونة فاخرة", descriptionEn: "Premium pasta crafted for rich flavor and firm texture.", descriptionAr: "معكرونة فاخرة بطعم غني وملمس مثالي.", image: "images/201923613_192878499505489_3908574732221649693_n.jpg" },
-  { nameEn: "Creamy Cheese", nameAr: "جبن كريمي", descriptionEn: "Smooth cheese blends ideal for cooking and family meals.", descriptionAr: "خلطات جبن ناعمة مثالية للطهي والوجبات العائلية.", image: "images/475058485_1167028542090475_8810668423557329837_n.jpg" },
-  { nameEn: "Fresh Milk", nameAr: "حليب طازج", descriptionEn: "Fresh dairy with trusted quality and purity.", descriptionAr: "ألبان طازجة بجودة ونقاء موثوق.", image: "images/472662913_1151476460312350_5917996203158256121_n.jpg" },
-  { nameEn: "Spice Blends", nameAr: "خليط بهارات", descriptionEn: "Flavorful spice collections for everyday cooking.", descriptionAr: "خليط بهارات لذيذ للطبخ اليومي.", image: "images/160566602_128645682595438_7372473545854698530_n.jpg" }
+  { nameEn: "Gourmet Pasta", nameAr: "معكرونة فاخرة", descriptionEn: "Premium pasta crafted for rich flavor and firm texture.", descriptionAr: "معكرونة فاخرة بطعم غني وملمس مثالي.", image: "201923613_192878499505489_3908574732221649693_n.jpg" },
+  { nameEn: "Creamy Cheese", nameAr: "جبن كريمي", descriptionEn: "Smooth cheese blends ideal for cooking and family meals.", descriptionAr: "خلطات جبن ناعمة مثالية للطهي والوجبات العائلية.", image: "475058485_1167028542090475_8810668423557329837_n.jpg" },
+  { nameEn: "Fresh Milk", nameAr: "حليب طازج", descriptionEn: "Fresh dairy with trusted quality and purity.", descriptionAr: "ألبان طازجة بجودة ونقاء موثوق.", image: "472662913_1151476460312350_5917996203158256121_n.jpg" },
+  { nameEnF: "Spice Blends", nameAr: "خليط بهارات", descriptionEn: "Flavorful spice collections for everyday cooking.", descriptionAr: "خليط بهارات لذيذ للطبخ اليومي.", image: "160566602_128645682595438_7372473545854698530_n.jpg" }
 ];
 
 function setLanguage(lang) {
