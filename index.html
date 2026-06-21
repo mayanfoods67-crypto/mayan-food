@@ -3,7 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mayan Foods - Premium food supplier in Libya. High-quality dairy, pasta, and specialty groceries for retailers and families." />
+  <meta name="keywords" content="premium food, dairy, pasta, groceries, Libya, food supplier" />
+  <meta name="author" content="Mayan Foods" />
+  <meta name="theme-color" content="#0a6b40" />
+  
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Mayan Foods | Premium Food Company" />
+  <meta property="og:description" content="High-quality packaged foods, dairy essentials, and specialty groceries delivered across Libya." />
+  <meta property="og:url" content="https://mayanfoods67-crypto.github.io/mayan-food/" />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:image" content="https://mayanfoods67-crypto.github.io/mayan-food/logo.png" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mayan Foods | Premium Food Company" />
+  <meta name="twitter:description" content="Premium packaged foods and dairy products for modern families and retailers." />
+  <meta name="twitter:image" content="https://mayanfoods67-crypto.github.io/mayan-food/logo.png" />
+  
   <title>Mayan Foods | Premium Food Company</title>
+  <link rel="canonical" href="https://mayanfoods67-crypto.github.io/mayan-food/" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -142,18 +162,18 @@
           <h3 data-key="galleryTitle">Visuals that reflect our premium food brand.</h3>
         </div>
         <div class="gallery-grid">
-          <button class="gallery-card" data-image="images/201923613_192878499505489_3908574732221649693_n.jpg">
-            <img src="c:\Users\MSI-PC\MayanFoodsSite\images\201923613_192878499505489_3908574732221649693_n.jpg" alt="Premium pasta" />
+          <button class="gallery-card" data-image="images/201923613_192878499505489_3908574732221649693_n.jpg" aria-label="Premium pasta products">
+            <img src="images/201923613_192878499505489_3908574732221649693_n.jpg" alt="Premium pasta" loading="lazy" />
           </button>
-          <button class="gallery-card" data-image="images/475058485_1167028542090475_8810668423557329837_n.jpg">
-            <img src="c:\Users\MSI-PC\MayanFoodsSite\images\475058485_1167028542090475_8810668423557329837_n.jpg" alt="Cheese products" />
+          <button class="gallery-card" data-image="images/475058485_1167028542090475_8810668423557329837_n.jpg" aria-label="Cheese products">
+            <img src="images/475058485_1167028542090475_8810668423557329837_n.jpg" alt="Cheese products" loading="lazy" />
           </button>
-          <button class="gallery-card" data-image="images/160566602_128645682595438_7372473545854698530_n.jpg">
-            <img src="c:\Users\MSI-PC\MayanFoodsSite\images\160566602_128645682595438_7372473545854698530_n.jpg" alt="Grocery shelf" />
+          <button class="gallery-card" data-image="images/160566602_128645682595438_7372473545854698530_n.jpg" aria-label="Grocery shelf display">
+            <img src="images/160566602_128645682595438_7372473545854698530_n.jpg" alt="Grocery shelf" loading="lazy" />
           </button>
-          <button class="gallery-card" data-image="images/472662913_1151476460312350_5917996203158256121_n.jpg">
-            <img src="c:\Users\MSI-PC\MayanFoodsSite\images\472662913_1151476460312350_5917996203158256121_n.jpg" alt="Dairy display" />
-          </button>
+          <button class="gallery-card" data-image="images/472662913_1151476460312350_5917996203158256121_n.jpg" aria-label="Dairy display">
+            <img src="images/472662913_1151476460312350_5917996203158256121_n.jpg" alt="Dairy display" loading="lazy" />
+            </button>
         </div>
       </section>
 
@@ -207,20 +227,24 @@
               <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm" novalidate>
             <label>
               <span data-key="contactName">Name</span>
-              <input type="text" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-ar="اسمك" />
+              <input type="text" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-ar="اسمك" required minlength="2" aria-required="true" />
+              <small class="error-message" style="display:none; color:#d32f2f;">Please enter a valid name (2+ characters)</small>
             </label>
             <label>
               <span data-key="contactEmail">Email</span>
-              <input type="email" placeholder="Your email" data-placeholder-en="Your email" data-placeholder-ar="بريدك الإلكتروني" />
+              <input type="email" name="email" placeholder="Your email" data-placeholder-en="Your email" data-placeholder-ar="بريدك الإلكتروني" required aria-required="true" />
+              <small class="error-message" style="display:none; color:#d32f2f;">Please enter a valid email address</small>
             </label>
             <label>
               <span data-key="contactMessage">Message</span>
-              <textarea rows="5" placeholder="Write your message" data-placeholder-en="Write your message" data-placeholder-ar="اكتب رسالتك"></textarea>
+              <textarea rows="5" name="message" placeholder="Write your message" data-placeholder-en="Write your message" data-placeholder-ar="اكتب رسالتك" required minlength="10" aria-required="true"></textarea>
+              <small class="error-message" style="display:none; color:#d32f2f;">Please enter a message (10+ characters)</small>
             </label>
-            <button type="submit" class="button button-primary" data-key="contactButton">Send Message</button>
+            <button type="submit" class="button button-primary" data-key="contactButton" aria-label="Submit contact form">Send Message</button>
+            <div class="form-status" style="display:none; margin-top:16px; padding:12px; border-radius:8px; font-size:0.95rem;"></div>
           </form>
         </div>
         <div class="map-frame">

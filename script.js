@@ -208,9 +208,56 @@ function setupLanguageSwitcher() {
   });
 }
 
+function setupContactForm() {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    
+    // Clear previous error messages
+    form.querySelectorAll(".error-message").forEach(msg => msg.style.display = "none");
+    const statusDiv = form.querySelector(".form-status");
+    statusDiv.style.display = "none";
+
+    // Validate fields
+    const name = form.querySelector("input[name='name']");
+    const email = form.querySelector("input[name='email']");
+    const message = form.querySelector("textarea[name='message']");
+    let isValid = true;
+
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      name.parentElement.querySelector(".error-message").style.display = "block";
+      isValid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+      email.parentElement.querySelector(".error-message").style.display = "block";
+      isValid = false;
+    }
+
+    if (!message.value.trim() || message.value.trim().length < 10) {
+      message.parentElement.querySelector(".error-message").style.display = "block";
+      isValid = false;
+    }
+
+    if (isValid) {
+      statusDiv.textContent = "✓ Message sent successfully! We'll get back to you soon.";
+      statusDiv.style.display = "block";
+      statusDiv.style.background = "rgba(76, 175, 80, 0.1)";
+      statusDiv.style.color = "#2e7d32";
+      statusDiv.style.borderLeft = "4px solid #4caf50";
+      form.reset();
+      setTimeout(() => statusDiv.style.display = "none", 5000);
+    }
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   setupLanguageSwitcher();
   setupGalleryLightbox();
   setupMobileMenu();
+  setupContactForm();
   setLanguage("en");
 });
